@@ -1,2 +1,2 @@
-VFT Personal Website;
+Personal Website;
 [Still in Development]
