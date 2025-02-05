@@ -1,0 +1,173 @@
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --neon-color: #00ff00;
+}
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  /* Scrollbar Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+
+  }
+  
+  /* Scrollbar Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+    border: #00ff00 solid 1px;
+
+  }
+  
+  /* Scrollbar Hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00ff00;
+    border: none;
+
+
+  }
+
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Adjust as necessary */
+}
+
+nav ul li a {
+    color: var(--neon-color);
+    text-decoration: none;
+}
+
+main {
+    padding-top: 60px; /* To avoid content being hidden behind the fixed header */
+}
+
+section {
+    min-height: calc(100vh - 60px); /* Adjust for header height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-container {
+    width: calc(100% - 20px); /* Full width with some padding */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent wrapping of content */
+    background-color: #121212; /* Dark background for contrast */
+    padding: 10px; /* Add some padding */
+}
+
+.bio-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.bio-container {
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+h1, h2, h3 {
+    color: var(--neon-color);
+}
+
+
+/* General styling for form elements */
+form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Full width */
+    max-width: 500px; /* Maximum width */
+    margin: 20px auto; /* Center the form */
+    padding: 20px; /* Padding around the form */
+    background-color: #1c1c1c; /* Dark background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Style for input fields and textarea */
+input[type="email"],
+textarea {
+    width: 50%; /* Full width */
+    padding: 10px; /* Padding inside input fields */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 2px solid var(--neon-color); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #2a2a2a; /* Darker background for inputs */
+    color: var(--text-color); /* Text color */
+    font-size: 1em; /* Font size */
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa; /* Light gray color for placeholders */
+    opacity: 1; /* Ensures full opacity for better visibility */
+}
+
+/* Focus state for inputs and textareas */
+input[type="email"]:focus,
+textarea:focus {
+    background-color: rgba(0, 255, 0, 0.1); /* Light green background on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling the submit button */
+button {
+    padding: 10px;
+    font-size: 1em;
+    color: #000000; /* Text color for button */
+    background-color: var(--neon-color); /* Neon color from variables */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #0f0f0f0f; /* Change color on hover */
+    text;   color: #00ff00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form {
+        width: 90%; /* Adjust width on smaller screens */
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+
+footer {
+    text-align: center; /* Center text in footer */
+}
