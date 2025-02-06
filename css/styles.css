@@ -109,19 +109,21 @@ form {
     background-color: #1c1c1c; /* Dark background for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    align-items: center;
 }
 
 /* Style for input fields and textarea */
 input[type="email"],
 textarea {
-    width: 50%; /* Full width */
+    width: 69%; /* Full width */
     padding: 10px; /* Padding inside input fields */
     margin-bottom: 15px; /* Space between inputs */
     border: 2px solid var(--neon-color); /* Border color */
     border-radius: 5px; /* Rounded corners */
     background-color: #2a2a2a; /* Darker background for inputs */
     color: var(--text-color); /* Text color */
-    font-size: 1em; /* Font size */
+    font-size: 1.03em; /* Font size */
+    text-align: center;
 }
 
 /* Placeholder styling */
