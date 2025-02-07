@@ -12,22 +12,18 @@
   /* Scrollbar Track */
   ::-webkit-scrollbar-track {
     background: black;
-
   }
   
   /* Scrollbar Handle */
   ::-webkit-scrollbar-thumb {
     background: black;
     border: #00ff00 solid 1px;
-
   }
   
   /* Scrollbar Hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #00ff00;
     border: none;
-
-
   }
 
 
@@ -110,6 +106,7 @@ form {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     align-items: center;
+    border: 2px solid var(--neon-color); /* Border color */
 }
 
 /* Style for input fields and textarea */
@@ -153,7 +150,8 @@ button {
 
 button:hover {
     background-color: #0f0f0f0f; /* Change color on hover */
-    text;   color: #00ff00;
+    text;   color: var(--neon-color);
+    border: 1px solid var(--neon-color);
 }
 
 /* Responsive adjustments */
@@ -164,7 +162,40 @@ button:hover {
     }
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
 
+#about .details-container {
+    width: 100%; 
+    text-align: left; /* Center content in container */
+    margin-top: 10px;
+}
+
+#about details {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#about summary {
+    cursor: pointer;
+    color: var(--neon-color);
+    display: inline-block; /*Button behavior*/
+    padding: 5px 10px; 
+    border: 1px solid var(--neon-color);
+    border-radius: 5px;
+}
+
+#about summary:focus {
+    outline: none; /*Remove default focus outline*/
+}
+
+#about summary::marker {
+    display: none; /*Hide default marker*/
+}
 
 
 
