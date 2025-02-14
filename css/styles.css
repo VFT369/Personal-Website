@@ -4,28 +4,47 @@
     --neon-color: #00ff00;
 }
 
+h1, h2, h3 {
+    color: var(--neon-color);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: em;
+}
+
 /* Scrollbar Width */
 ::-webkit-scrollbar {
     width: 9px;
-  }
-  
-  /* Scrollbar Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
     background: black;
-  }
-  
-  /* Scrollbar Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Scrollbar Handle */
+::-webkit-scrollbar-thumb {
     background: black;
     border: #00ff00 solid 1px;
-  }
-  
-  /* Scrollbar Hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Scrollbar Hover */
+::-webkit-scrollbar-thumb:hover {
     background: #00ff00;
     border: none;
-  }
-
+}
 
 body {
     font-family: 'Courier New', monospace;
@@ -89,9 +108,6 @@ section {
     scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
-h1, h2, h3 {
-    color: var(--neon-color);
-}
 
 
 /* General styling for form elements */
@@ -165,28 +181,31 @@ button:hover {
 #about {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: flex-start; /*  Left align items */
+    text-align: left; /*  Left align text */
+    width: 80%; /*  set a width for the section */
+    margin: 0 auto; /*  center the section horizontally */
 }
 
 #about .details-container {
-    width: 100%; 
-    text-align: left; /* Center content in container */
-    margin-top: 10px;
+    width: 100%; /* Match the width of the about section */
+    text-align: left; /*  Left align text within the container */
+    margin-top: 10px; /* Add some space above the details */
 }
 
 #about details {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;  /* Left align items inside details */
 }
 
 #about summary {
     cursor: pointer;
     color: var(--neon-color);
-    display: inline-block; /*Button behavior*/
-    padding: 5px 10px; 
+    display: inline-block;
     border: 1px solid var(--neon-color);
     border-radius: 5px;
+    margin-bottom: 10px; /* Add some space below the summary */
 }
 
 #about summary:focus {
@@ -197,9 +216,9 @@ button:hover {
     display: none; /*Hide default marker*/
 }
 
-
-
-
+#about .additional-details {
+  text-align: left; /*  Left align text in additional details */
+}
 
 footer {
     text-align: center; /* Center text in footer */
