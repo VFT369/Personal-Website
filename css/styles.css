@@ -21,7 +21,7 @@ h3 {
 }
 
 p {
-    font-size: em;
+    font-size: 1em;
 }
 
 /* Scrollbar Width */
@@ -71,7 +71,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px; /* Adjust as necessary */
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -80,11 +80,11 @@ nav ul li a {
 }
 
 main {
-    padding-top: 60px; /* To avoid content being hidden behind the fixed header */
+    padding-top: 60px;
 }
 
 section {
-    min-height: calc(100vh - 60px); /* Adjust for header height */
+    min-height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,88 +92,81 @@ section {
 }
 
 .bio-container {
-    width: calc(100% - 20px); /* Full width with some padding */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical scrollbar */
-    white-space: nowrap; /* Prevent wrapping of content */
-    background-color: #121212; /* Dark background for contrast */
-    padding: 10px; /* Add some padding */
+    width: calc(100% - 20px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background-color: #121212;
+    padding: 10px;
 }
 
 .bio-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none;
 }
 
 .bio-container {
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
 }
 
-
-
-/* General styling for form elements */
 form {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    width: 100%; /* Full width */
-    max-width: 500px; /* Maximum width */
-    margin: 20px auto; /* Center the form */
-    padding: 20px; /* Padding around the form */
-    background-color: #1c1c1c; /* Dark background for contrast */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     align-items: center;
-    border: 2px solid var(--neon-color); /* Border color */
+    border: 2px solid var(--neon-color);
 }
 
-/* Style for input fields and textarea */
 input[type="email"],
 textarea {
-    width: 69%; /* Full width */
-    padding: 10px; /* Padding inside input fields */
-    margin-bottom: 15px; /* Space between inputs */
-    border: 2px solid var(--neon-color); /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #2a2a2a; /* Darker background for inputs */
-    color: var(--text-color); /* Text color */
-    font-size: 1.03em; /* Font size */
+    width: 69%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--neon-color);
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: var(--text-color);
+    font-size: 1.03em;
     text-align: center;
 }
 
-/* Placeholder styling */
 input::placeholder,
 textarea::placeholder {
-    color: #aaa; /* Light gray color for placeholders */
-    opacity: 1; /* Ensures full opacity for better visibility */
+    color: #aaa;
+    opacity: 1;
 }
 
-/* Focus state for inputs and textareas */
 input[type="email"]:focus,
 textarea:focus {
-    background-color: rgba(0, 255, 0, 0.1); /* Light green background on focus */
-    outline: none; /* Remove default outline */
+    background-color: rgba(0, 255, 0, 0.1);
+    outline: none;
 }
 
-/* Styling the submit button */
 button {
     padding: 10px;
     font-size: 1em;
-    color: #000000; /* Text color for button */
-    background-color: var(--neon-color); /* Neon color from variables */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners for button */
-    cursor: pointer; /* Pointer cursor on hover */
+    color: #000000;
+    background-color: var(--neon-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #0f0f0f0f; /* Change color on hover */
-    text;   color: var(--neon-color);
+    background-color: #0f0f0f0f;
+    color: var(--neon-color);
     border: 1px solid var(--neon-color);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     form {
-        width: 90%; /* Adjust width on smaller screens */
+        width: 90%;
         padding: 15px;
     }
 }
@@ -181,22 +174,22 @@ button:hover {
 #about {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /*  Left align items */
-    text-align: left; /*  Left align text */
-    width: 80%; /*  set a width for the section */
-    margin: 0 auto; /*  center the section horizontally */
+    align-items: flex-start;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #about .details-container {
-    width: 100%; /* Match the width of the about section */
-    text-align: left; /*  Left align text within the container */
-    margin-top: 10px; /* Add some space above the details */
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
 }
 
 #about details {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;  /* Left align items inside details */
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
 }
 
 #about summary {
@@ -205,21 +198,36 @@ button:hover {
     display: inline-block;
     border: 1px solid var(--neon-color);
     border-radius: 5px;
-    margin-bottom: 10px; /* Add some space below the summary */
+    margin-bottom: 10px;
+    padding: 5px 10px; /* Add padding to the summary */
 }
 
 #about summary:focus {
-    outline: none; /*Remove default focus outline*/
+    outline: none;
 }
 
 #about summary::marker {
-    display: none; /*Hide default marker*/
+    display: none;
 }
 
 #about .additional-details {
-  text-align: left; /*  Left align text in additional details */
+    text-align: left;
+}
+
+/* Additional styling for consistency */
+.additional-details p {
+    margin-top: 0;
 }
 
 footer {
-    text-align: center; /* Center text in footer */
+    text-align: center;
+}
+
+/* Make ASCII art responsive */
+#home pre {
+    font-size: calc(1vw + 0.5em); /* Responsive font size */
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    white-space: pre; /* Preserve whitespace and line breaks */
+    text-align: center; /* Center align the ASCII art */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
 }
